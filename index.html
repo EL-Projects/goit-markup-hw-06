@@ -506,6 +506,92 @@
             <use href="./images/icons.svg#icon-modal-close-btn"></use>
           </svg>
         </button>
+        <p class="contact-form-text">Оставьте свои данные, мы вам перезвоним</p>
+
+        <form class="contact-form">
+          <label class="contact-form-field">
+            <span class="contact-form-field-span">Имя</span>
+            <div class="contact-form-input-wrapper">
+              <input
+                class="contact-form-input"
+                type="text"
+                required
+                name="user_name"
+                minlength="2"
+              />
+              <svg class="contact-form-icon">
+                <use
+                  href="./images/icons.svg#icon-form-person"
+                  width="18px"
+                  height="18px"
+                ></use>
+              </svg>
+            </div>
+          </label>
+
+          <label class="contact-form-field">
+            <span class="contact-form-field-span">Телефон</span>
+            <div class="contact-form-input-wrapper">
+              <input
+                class="contact-form-input"
+                type="tel"
+                name="user_phone"
+                required
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              /><svg class="contact-form-icon">
+                <use
+                  href="./images/icons.svg#icon-form-phone"
+                  width="18px"
+                  height="18px"
+                ></use>
+              </svg>
+            </div>
+          </label>
+
+          <label class="contact-form-field">
+            <span class="contact-form-field-span">Почта</span>
+            <div class="contact-form-input-wrapper">
+              <input
+                class="contact-form-input"
+                type="mail"
+                name="user_mail"
+                required
+              />
+              <svg class="contact-form-icon">
+                <use
+                  href="./images/icons.svg#icon-form-mail"
+                  width="18px"
+                  height="18px"
+                ></use>
+              </svg>
+            </div>
+          </label>
+
+          <label class="contact-form-field" for="">
+            <span class="contact-form-field-span">Комментарий</span>
+            <textarea
+              class="contact-form-comment"
+              name="user_comment"
+              id=""
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <input
+            class="contact-form-checkbox visually-hidden"
+            id="checkbox_agrement"
+            type="checkbox"
+            name="user_agrement"
+            required
+          />
+          <label class="contact-form-checkbox-label" for="checkbox_agrement"
+            >Соглашаюсь с рассылкой и принимаю&nbsp;
+            <a class="contact-form-checkbox-link link" href=""
+              >Условия договора</a
+            ></label
+          >
+          <button class="contact-form-send-btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
