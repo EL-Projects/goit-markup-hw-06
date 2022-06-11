@@ -464,6 +464,7 @@
             </ul>
           </address>
         </div>
+        <!-- Footer socials -->
         <div class="footer-join-us">
           <h2 class="footer-social-title">присоединяйтесь</h2>
           <ul class="footer-social-list list">
@@ -497,8 +498,29 @@
             </li>
           </ul>
         </div>
+        <!-- Footer subscribe -->
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-title">Подпишитесь на рассылку</p>
+          <form>
+            <label for="footer_subscribe_mail"></label>
+            <input
+              id="footer_subscribe_mail"
+              class="footer-subscribe-input"
+              placeholder="E-mail"
+              name="user-subscribe-mail"
+              required
+            />
+            <button type="submit" class="footer-subscribe-btn">
+              Подписаться
+              <svg class="footer-subscribe-icon" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-send-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" data-modal-close>
@@ -507,12 +529,13 @@
           </svg>
         </button>
         <p class="contact-form-text">Оставьте свои данные, мы вам перезвоним</p>
-
         <form class="contact-form">
-          <label class="contact-form-field">
-            <span class="contact-form-field-span">Имя</span>
-            <div class="contact-form-input-wrapper">
+          <div class="contact-form-input-wrapper">
+            <label class="contact-form-field" for="contact_name">
+              <span class="contact-form-field-span">Имя</span>
+
               <input
+                id="contact_name"
                 class="contact-form-input"
                 type="text"
                 required
@@ -526,13 +549,14 @@
                   height="18px"
                 ></use>
               </svg>
-            </div>
-          </label>
+            </label>
+          </div>
+          <div class="contact-form-input-wrapper">
+            <label class="contact-form-field" for="contact_phone">
+              <span class="contact-form-field-span">Телефон</span>
 
-          <label class="contact-form-field">
-            <span class="contact-form-field-span">Телефон</span>
-            <div class="contact-form-input-wrapper">
               <input
+                id="contact_phone"
                 class="contact-form-input"
                 type="tel"
                 name="user_phone"
@@ -546,16 +570,17 @@
                   height="18px"
                 ></use>
               </svg>
-            </div>
-          </label>
+            </label>
+          </div>
+          <div class="contact-form-input-wrapper">
+            <label class="contact-form-field" for="contact_email">
+              <span class="contact-form-field-span">Почта</span>
 
-          <label class="contact-form-field">
-            <span class="contact-form-field-span">Почта</span>
-            <div class="contact-form-input-wrapper">
               <input
                 class="contact-form-input"
-                type="mail"
-                name="user_mail"
+                id="contact_email"
+                type="email"
+                name="user_email"
                 required
               />
               <svg class="contact-form-icon">
@@ -565,26 +590,26 @@
                   height="18px"
                 ></use>
               </svg>
-            </div>
-          </label>
+            </label>
+          </div>
 
-          <label class="contact-form-field" for="">
+          <label class="contact-form-field" for="contact_comment">
             <span class="contact-form-field-span">Комментарий</span>
             <textarea
+              id="contact_comment"
               class="contact-form-comment"
               name="user_comment"
-              id=""
               placeholder="Введите текст"
             ></textarea>
           </label>
           <input
             class="contact-form-checkbox visually-hidden"
-            id="checkbox_agrement"
+            id="checkbox_agreement"
             type="checkbox"
-            name="user_agrement"
+            name="user_agreement"
             required
           />
-          <label class="contact-form-checkbox-label" for="checkbox_agrement"
+          <label class="contact-form-checkbox-label" for="checkbox_agreement"
             >Соглашаюсь с рассылкой и принимаю&nbsp;
             <a class="contact-form-checkbox-link link" href=""
               >Условия договора</a
