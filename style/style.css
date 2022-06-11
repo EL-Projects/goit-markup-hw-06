@@ -940,7 +940,7 @@ body {
   border-color: var(--accent-color);
 }
 
-/* checkbox */
+/* checkbox button*/
 
 .contact-form-checkbox-label {
   display: flex;
@@ -962,7 +962,10 @@ body {
 }
 
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before {
-  background-color: var(--accent-color);
+  background-color: #188ce8;
+  background-image: url(../images/icons.svg#icon-send-telegram);
+
+  border: var(--accent-color);
 }
 
 .contact-form-checkbox:focus + .contact-form-checkbox-label::before {
